@@ -10,6 +10,4 @@ const DescriptionCargo = (props) => {
   )
 }
     
-
-
 export default DescriptionCargo; 
