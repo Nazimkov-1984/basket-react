@@ -1,0 +1,13 @@
+.card__description-wrapper {
+  display: flex;
+  margin-right: 100px;
+}
+.card__description--img {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+  border: 1px solid grey;
+}
+.card__title {
+  margin-right: 10px;
+}

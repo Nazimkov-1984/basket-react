@@ -1,0 +1,60 @@
+.quantity-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 40px;
+}
+.quantity__button-wrapper{
+  display: flex;
+}
+.quantity__button--minus, .quantity__button--plus  {
+  padding: 10px 10px;
+  transition: all .8s;
+}
+.quantity__button--minus:hover, .quantity__button--plus:hover {
+  background-color: #eba753;
+  cursor: pointer;
+}
+.quantity__button--minus {
+  margin-right: 10px;
+}
+.quantity__input {
+  margin-right: 10px;
+  padding: 10px;
+}
+.quantity__input::-webkit-input-placeholder {
+  text-indent: 0px;
+  transition: text-indent 0.5s ease;
+}
+.quantity__input:-moz-placeholder {
+  text-indent: 0px;
+  transition: text-indent 0.5s ease;
+}
+.quantity__input::-moz-placeholder {
+  text-indent: 0px;
+  transition: text-indent 0.5s ease;
+}
+.quantity__input:-ms-input-placeholder {
+  text-indent: 0px;
+  transition: text-indent 0.5s ease;
+}
+.quantity__input:focus::-webkit-input-placeholder {
+  text-indent: 500px;
+  transition: text-indent 0.5s ease;
+}
+.quantity__input:focus::-moz-placeholder {
+  text-indent: 500px;
+  transition: text-indent 0.5s ease;
+}
+.quantity__input:focus:-moz-placeholder {
+  text-indent: 500px;
+  transition: text-indent 0.5s ease;
+}
+.quantity__input:focus:-ms-input-placeholder {
+  text-indent: 500px;
+  transition: text-indent 0.5s ease;
+}
+.quantity__title {
+  align-self: center;
+}

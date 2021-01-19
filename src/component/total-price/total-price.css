@@ -1,0 +1,30 @@
+.total-price-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  align-self: flex-end;
+  background-color: darkgrey;
+  padding: 10px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.total-price-number-wrapper {
+  display: flex;
+}
+.total-price__text {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+.total-price__number {
+  margin-right: 10px;
+}
+.total-price__button {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  transition: all .6s;
+}
+.total-price__button:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}

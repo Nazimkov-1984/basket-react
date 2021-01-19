@@ -1,0 +1,10 @@
+.btn-trash {
+  width: 25px;
+  height: 25px;
+  align-self: start;
+  transition: all .8s;
+}
+.btn-trash:hover {
+  cursor: pointer;
+  transform: scale(2);
+}

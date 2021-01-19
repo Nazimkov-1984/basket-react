@@ -1,0 +1,10 @@
+.basket-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+.basket__title {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
