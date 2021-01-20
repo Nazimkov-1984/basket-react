@@ -8,6 +8,12 @@
   padding: 10px;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
+@media(max-width: 375px),(max-width: 768px){
+  .total-price-wrapper {
+    align-self:center;
+    margin-bottom: 20px;
+  }
+}
 .total-price-number-wrapper {
   display: flex;
 }
