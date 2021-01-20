@@ -9,21 +9,57 @@ import QuantityCargo from '../quantity-cargo';
 import ButtonTrash from '../button-trash';
 import DescriptionCargo from '../description-cargo'; 
 import PriceCargo from '../price-cargo';
+import Modal from '../modal';
 
-var totalSumArray = 0;
+let totalSumArray = 0;
  dataCards.map(item => {
   totalSumArray += item.price * item.quantity;
  });
-console.log(totalSumArray)
+
+
 class Basket extends Component {
 constructor(props) {
   super(props);
   this.state = {
     data: dataCards,
-    total: totalSumArray 
+    total: totalSumArray,
+    isOpenModal: false
   }
   this.plusQuantity = this.plusQuantity.bind(this);
   this.minusQuantity = this.minusQuantity.bind(this);
+  this.showModal = this.showModal.bind(this);
+  this.hideModal = this.hideModal.bind(this);
+  this.deleteCard = this.deleteCard.bind(this);
+  this.createSendObject = this.createSendObject.bind(this);
+}
+createSendObject() {
+const cargoObj = Object.assign({}, dataCards);
+console.log(cargoObj);
+}
+showModal () {
+  this.setState(state => ({
+    isOpenModal: true
+   })
+   )
+}
+hideModal () {
+  this.setState(state => ({
+    isOpenModal: false
+   })
+   )
+}
+deleteCard(id) {
+  delete dataCards[id];
+  totalSumArray = 0;
+  dataCards.map(item => {
+    totalSumArray += item.price * item.quantity;
+   });
+  this.setState(state => ({
+    data: dataCards,
+    isOpenModal: false,
+    total: totalSumArray
+   })
+  )
 }
 plusQuantity (i) {
   dataCards[i].quantity = ++dataCards[i].quantity;
@@ -71,12 +107,14 @@ render () {
               <DescriptionCargo name = {item.name} imgSrc = {item.imgSrc}/>
               <QuantityCargo quantity = {item.quantity} plusQuantity = {this.plusQuantity} minusQuantity = {this.minusQuantity} id= {item.id}/>
               <PriceCargo price = {item.price * item.quantity}/>
-              <ButtonTrash/>
+              <ButtonTrash openModal = {this.showModal}/>
+              <Modal isOpenModal = {this.state.isOpenModal} closeModal = {this.hideModal} deleteCard = {this.deleteCard} id= {item.id}/>
           </CargoCard>
         )
       })}
       <TotalPrice total ={this.state.total}/>
-      <ButtonSubmit/>
+      <ButtonSubmit createSendObject = {this.createSendObject}/>
+      
     </div>
   ) 
 }

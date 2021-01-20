@@ -14,9 +14,12 @@
 .total-price__text {
   margin-bottom: 20px;
   font-size: 1.5rem;
+  font-weight: bold;
 }
 .total-price__number {
   margin-right: 10px;
+  font-size: 1.3rem;
+
 }
 .total-price__button {
   width: 100%;

@@ -9,7 +9,7 @@ const TotalPrice = (props) => {
     <div className = 'total-price-wrapper'>
       <span className = 'total-price__text'>Общая сумма:</span>
       <div className = 'total-price-number-wrapper'>
-      <span className = 'total-price__number'>{props.total}</span> <span>&#8372;</span>
+      <span className = 'total-price__number'>{props.total}</span> <span className = 'total-price__number'>&#8372;</span>
       </div>
       
     </div>

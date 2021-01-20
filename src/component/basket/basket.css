@@ -5,6 +5,7 @@
   flex-direction: column;
 }
 .basket__title {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin-bottom: 20px;
   font-size: 2rem;
 }
