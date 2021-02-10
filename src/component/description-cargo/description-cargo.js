@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './description-cargo.css';
 
+
 const DescriptionCargo = (props) => {
   return (
     <div className = 'card__description-wrapper'>

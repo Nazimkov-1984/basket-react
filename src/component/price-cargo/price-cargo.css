@@ -1,6 +1,5 @@
 .card__price--wrapper {
-  margin-right: 80px;
-  width: 100px;
+  white-space: nowrap;
 }
 @media(max-width: 375px),(max-width: 768px){
   .card__price--wrapper {
