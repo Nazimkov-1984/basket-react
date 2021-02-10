@@ -8,25 +8,15 @@ import QuantityCargo from '../quantity-cargo';
 import ButtonTrash from '../button-trash';
 import DescriptionCargo from '../description-cargo'; 
 import PriceCargo from '../price-cargo';
-import Modal from '../modal';
 
 import store from '../../store/index.js';
 import { observer } from 'mobx-react';
-
-let totalSumArray = 0;
- store.dataCards.map(item => {
-  totalSumArray += item.price * item.quantity;
- });
-
-
 
 class Basket extends Component {
 constructor(props) {
   super(props);
   this.state = {
-    data: store.dataCards,
-    total: totalSumArray,
-    isOpenModal: false
+    data: store.dataCards
   }
 }
 
@@ -44,7 +34,7 @@ render () {
           </CargoCard>
         )
       })}
-      <TotalPrice total ={this.state.total}/>
+      <TotalPrice/>
       <ButtonSubmit/>
     </div>
   ) 

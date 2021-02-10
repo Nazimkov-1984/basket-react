@@ -4,10 +4,9 @@ import binImg from '..//../assets/img/bin.svg';
 
 const ButtonTrash = (props) => {
 return (
-  <button onClick = {props.openModal} className = 'button-trash'>
+  <button className = 'button-trash'>
     <img className = 'btn-trash-img' src = {binImg} alt = 'trash'></img>
-  </button>
-  
+  </button> 
 )
 }
 

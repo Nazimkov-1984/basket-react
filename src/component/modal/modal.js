@@ -7,10 +7,10 @@ const Modal = (props) => {
             (
             <div className= 'modal'>
                 <div className = 'modal-body'>
-                    <span className = 'modal-title'>Вы действительно хотите удалить товар из корзины</span>
+                    <span className = 'modal-title'>Вы действительно хотите удалить товар из корзины?</span>
                     <div className = 'button-wrapper'>
-                    <button className = 'button-delete' onClick = {() => props.deleteCard(props.id)}>Удалить</button>
-                    <button className = 'button-cancel' onClick = {props.closeModal}>Отмена</button>
+                    <button className = 'button-delete'>Удалить</button>
+                    <button className = 'button-cancel'>Отмена</button>
                     </div>
                     
                 </div>
