@@ -1,4 +1,5 @@
 import {observable, computed, action, makeAutoObservable} from 'mobx';
+import ModalStore from './modal.js';
 class Store {
      dataCards = [
         {
@@ -40,6 +41,10 @@ class Store {
         if ((this.dataCards[`${id}`].quantity) > 1) {
         this.dataCards[`${id}`].quantity = --this.dataCards[`${id}`].quantity;
         }
+      }
+      deleteCard () {
+        ModalStore.isOpenModal = false;
+        
       }
 }
 
