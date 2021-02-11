@@ -14,11 +14,13 @@ class ModalStore {
         this.idCard = id;
         
     }
-    closeModal = (id) => {
-        const modalWindow = document.querySelector('.modal');
-        
-        this.isOpenModal = !this.isOpenModal;
+    closeModal = (e) => {
+        const modal = document.querySelector('.modal_modal__3m5ga');
+        if (e.target === modal) {
+            this.isOpenModal = !this.isOpenModal;
+        }
     }
+    
 }
 
 export default new ModalStore();

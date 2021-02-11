@@ -9,7 +9,7 @@ const Modal = observer( () => {
     if (ModalStore.isOpenModal) {
         return(
             (
-            <div className= {scss.modal}>
+            <div className= {scss.modal} onClick = {ModalStore.closeModal}>
                 <div className = {scss.modalBody}>
                     <span className = {scss.modalTitle}>Вы действительно хотите удалить товар из корзины?</span>
                     <div className = {scss.buttonWrapper}>
