@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { FC } from 'react';
 import Basket from './component/basket';
 import './App.css';
 
-function App() {
+interface mainApp {
+  type?: FC
+}
+
+const  App: React.FunctionComponent<mainApp> = () => {
   return (
     <div className="basket">
      <Basket/>

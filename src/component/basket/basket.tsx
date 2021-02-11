@@ -13,7 +13,7 @@ import { observer } from 'mobx-react';
 const  scss = require ('./basket.module.scss');
 
 
-const Basket =  observer( () => {
+const Basket:React.FunctionComponent =  observer( () => {
 
   return (
     <div className = {scss.basketHeader}>

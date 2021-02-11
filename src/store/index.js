@@ -1,5 +1,7 @@
 import {observable, computed, makeAutoObservable, action} from 'mobx';
 import ModalStore from './modal.js';
+import API from '../modules/request.js';
+
 class Store {
      dataCards = [
         {
@@ -49,6 +51,7 @@ class Store {
         this.dataCards = this.dataCards.filter(item => item.id !== ModalStore.idCard);
         ModalStore.isOpenModal = false;
       }
+
 }
 
 export default new Store();
