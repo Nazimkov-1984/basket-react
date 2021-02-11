@@ -51,7 +51,9 @@ class Store {
         this.dataCards = this.dataCards.filter(item => item.id !== ModalStore.idCard);
         ModalStore.isOpenModal = false;
       }
-
+      getData = () => {
+        console.log('Hello');
+      }
 }
 
 export default new Store();
