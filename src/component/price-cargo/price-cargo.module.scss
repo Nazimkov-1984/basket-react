@@ -1,9 +1,9 @@
-.card__price--wrapper {
+.cardPriceWrapper {
   white-space: nowrap;
   margin-right: 10px;
 }
 @media(max-width: 375px),(max-width: 768px){
-  .card__price--wrapper {
+  .cardPriceWrapper {
     margin-right: 0;
     width: 100%;
     display: flex;

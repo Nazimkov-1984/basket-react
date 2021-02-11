@@ -1,45 +1,45 @@
-.quantity-wrapper {
+.quantityWrapper {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
   margin-right: 5px;
 }
-.quantity__button-wrapper{
+.quantityButtonWrapper{
   display: flex;
 }
-.quantity__button--minus, .quantity__button--plus  {
+.quantityButtonMinus, .quantityButtonPlus  {
   padding: 10px 10px;
   transition: all .8s;
 }
-.quantity__button--minus:hover, .quantity__button--plus:hover {
+.quantityButtonMinus:hover, .quantityButtonPlus:hover {
   background-color: #eba753;
   cursor: pointer;
 }
-.quantity__button--minus {
+.quantityButtonMinus {
   margin-right: 10px;
 }
-.quantity__input {
+.quantityInput {
   margin-right: 10px;
   padding: 10px;
 }
 @media(max-width: 375px),(max-width: 768px){
-  .quantity__input {
+  .quantityInput {
     width:30%
   }
-  .quantity-wrapper{
+  .quantityWrapper{
     margin-right: 0;
     margin-bottom: 10px;
   }
-  .quantity__button-wrapper{
+  .quantityButtonWrapper{
     justify-content: center;
   }
 }
-.quantity__input::-webkit-input-placeholder {
+.quantityInput::-webkit-input-placeholder {
   text-indent: 0px;
   transition: text-indent 0.5s ease;
 }
-.quantity__input:-moz-placeholder {
+.quantityInput:-moz-placeholder {
   text-indent: 0px;
   transition: text-indent 0.5s ease;
 }
@@ -47,26 +47,26 @@
   text-indent: 0px;
   transition: text-indent 0.5s ease;
 }
-.quantity__input:-ms-input-placeholder {
+.quantityInput:-ms-input-placeholder {
   text-indent: 0px;
   transition: text-indent 0.5s ease;
 }
-.quantity__input:focus::-webkit-input-placeholder {
+.quantityInput:focus::-webkit-input-placeholder {
   text-indent: 500px;
   transition: text-indent 0.5s ease;
 }
-.quantity__input:focus::-moz-placeholder {
+.quantityInput:focus::-moz-placeholder {
   text-indent: 500px;
   transition: text-indent 0.5s ease;
 }
-.quantity__input:focus:-moz-placeholder {
+.quantityInput:focus:-moz-placeholder {
   text-indent: 500px;
   transition: text-indent 0.5s ease;
 }
-.quantity__input:focus:-ms-input-placeholder {
+.quantityInput:focus:-ms-input-placeholder {
   text-indent: 500px;
   transition: text-indent 0.5s ease;
 }
-.quantity__title {
+.quantityTitle {
   align-self: center;
 }

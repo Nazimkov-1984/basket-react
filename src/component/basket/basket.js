@@ -10,13 +10,14 @@ import PriceCargo from '../price-cargo';
 import store from '../../store/index.js';
 import { observer } from 'mobx-react';
 
-import './basket.css';
+const  scss = require ('./basket.module.scss');
+
 
 const Basket =  observer( () => {
 
   return (
-    <div className = 'basket-header'>
-      <h2 className = 'basket__title'>Корзина</h2>
+    <div className = {scss.basketHeader}>
+      <h2 className = {scss.basketTitle}>Корзина</h2>
       {store.dataCards.map((item) => {
         return(
           <CargoCard key = {item.id}>

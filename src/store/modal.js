@@ -1,4 +1,4 @@
-import {observable, computed, action, makeAutoObservable} from 'mobx';
+import {observable, makeAutoObservable} from 'mobx';
 
 class ModalStore {
     isOpenModal = false;
@@ -9,10 +9,15 @@ class ModalStore {
             idCard: observable
         })
     }
-    toggleModal(id) {
+    toggleModal = (id) => {
         this.isOpenModal = !this.isOpenModal;
         this.idCard = id;
         
+    }
+    closeModal = (id) => {
+        const modalWindow = document.querySelector('.modal');
+        
+        this.isOpenModal = !this.isOpenModal;
     }
 }
 

@@ -1,4 +1,4 @@
-.total-price-wrapper {
+.totalPriceWrapper {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -9,31 +9,31 @@
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 @media(max-width: 375px),(max-width: 768px){
-  .total-price-wrapper {
+  .totalPriceWrapper {
     align-self:center;
     margin-bottom: 20px;
   }
 }
-.total-price-number-wrapper {
+.totalPriceNumberWrapper {
   display: flex;
 }
-.total-price__text {
+.totalPriceText {
   margin-bottom: 20px;
   font-size: 1.5rem;
   font-weight: bold;
 }
-.total-price__number {
+.totalPriceNumber {
   margin-right: 10px;
   font-size: 1.3rem;
 
 }
-.total-price__button {
+.totalPriceButton {
   width: 100%;
   padding: 12px;
   margin-bottom: 10px;
   transition: all .6s;
 }
-.total-price__button:hover {
+.totalPriceButton:hover {
   cursor: pointer;
   opacity: 0.5;
 }

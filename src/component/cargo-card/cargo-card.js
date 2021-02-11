@@ -1,11 +1,11 @@
 import React from 'react';
 
-import './cargo-card.css';
+const  scss = require ('./cargo-card.module.scss');
 
 const CargoCard = (props) => {
 
   return (
-    <div className = 'card__wrapper'>
+    <div className = {scss.cardWrapper}>
     {props.children}
   </div>
 )

@@ -1,9 +1,9 @@
 import React from 'react';
-import './button-submit.css';
+const  scss = require ('./button-submit.module.scss');
 
 const ButtonSubmit = (props) => {
 return (
-  <button type = 'submit' className = 'basket-button' onClick = {props.createSendObject}>ОФОРМИТЬ</button>
+  <button type = 'submit' className = {scss.basketButton} onClick = {props.createSendObject}>ОФОРМИТЬ</button>
 )
 }
 

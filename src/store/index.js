@@ -37,15 +37,15 @@ class Store {
       get getTotalSum () {
         return this.dataCards.reduce(((accumulator, currentValue) => accumulator + (currentValue.price * currentValue.quantity)),0);
       }
-      incrmentQuantity (id) {
+      incrmentQuantity = (id) => {
         this.dataCards[`${id}`].quantity = ++this.dataCards[`${id}`].quantity;
       }
-      decrementQuantity(id) {
+      decrementQuantity= (id) => {
         if ((this.dataCards[`${id}`].quantity) > 1) {
         this.dataCards[`${id}`].quantity = --this.dataCards[`${id}`].quantity;
         }
       }
-        deleteCard () {
+        deleteCard = () => {
         this.dataCards = this.dataCards.filter(item => item.id !== ModalStore.idCard);
         ModalStore.isOpenModal = false;
       }
