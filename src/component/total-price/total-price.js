@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './total-price.css';
 import store  from '../../store/index.js';
 import {observer} from 'mobx-react-lite';

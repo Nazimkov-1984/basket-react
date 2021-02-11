@@ -1,4 +1,4 @@
-import {observable, computed, action, makeAutoObservable} from 'mobx';
+import {observable, computed, makeAutoObservable, action} from 'mobx';
 import ModalStore from './modal.js';
 class Store {
      dataCards = [
@@ -25,10 +25,13 @@ class Store {
         }
       ]; 
       
-      constructor (dataCards) {
+      constructor () {
         makeAutoObservable(this, {
           dataCards: observable, 
-          getTotalSum : computed
+          getTotalSum : computed,
+          incrmentQuantity: action,
+          decrementQuantity: action,
+          deleteCard: action
         })
       }
       get getTotalSum () {
@@ -42,9 +45,9 @@ class Store {
         this.dataCards[`${id}`].quantity = --this.dataCards[`${id}`].quantity;
         }
       }
-      deleteCard () {
+        deleteCard () {
+        this.dataCards = this.dataCards.filter(item => item.id !== ModalStore.idCard);
         ModalStore.isOpenModal = false;
-        
       }
 }
 

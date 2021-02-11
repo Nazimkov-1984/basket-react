@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import  './quantity-cargo.css'
 import store from '../../store/index.js';
 
@@ -8,13 +8,12 @@ const QuantityCargo = (props) => {
       <span className = 'quantity__title'>Количество</span>
       <div className = 'quantity__button-wrapper'>
          <button className = 'quantity__button--minus' onClick = {() => store.decrementQuantity(props.id)} >-</button> 
-         <input className = 'quantity__input' value = {store.dataCards[`${props.id}`].quantity}></input>
+         <input className = 'quantity__input' value = {store.dataCards[`${store.dataCards.findIndex(x => x.id === props.id)}`].quantity}></input>
          <button className = 'quantity__button--plus' onClick = {() => store.incrmentQuantity(props.id)} >+</button> 
       </div>
   
     </div>
   )
-  
 }
 
 export default QuantityCargo;
