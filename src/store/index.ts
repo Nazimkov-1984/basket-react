@@ -6,7 +6,7 @@ export interface IDataCard {
   name: string;
   imgSrc: string;
   price: number;
-  quantity: number
+  quantity: number | any
 }
 
 class Store {
@@ -53,6 +53,14 @@ class Store {
   setGoods = (data: Array<IDataCard>) => {
     this._dataCards = data;
 
+  }
+
+  clearInput = (index: number) => {
+    this._dataCards[index].quantity = '';
+  }
+
+  defaultQuantity = (index: number) => {
+    this._dataCards[index].quantity = 1;
   }
 }
 
