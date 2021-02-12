@@ -1,7 +1,7 @@
 import React from 'react';
 const  scss = require ('./price-cargo.module.scss');
 
- const  PriceCargo = (props) =>  {
+ const  PriceCargo = (props: { price: number }) =>  {
 
   return (
     <div className = {scss.cardPriceWrapper}>

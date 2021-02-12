@@ -1,14 +1,15 @@
 import React from 'react';
 import binImg from '..//../assets/img/bin.svg';
-import ModalStore from '../../store/modal.js';
-import { useCallback } from 'react/cjs/react.development';
+import ModalStore from '../../store/modal';
+import { useCallback } from 'react';
 
 const  scss = require ('./button-trash.module.scss');
 
 
-const ButtonTrash = (props) => {
+const ButtonTrash = (props: { id: number}) => {
 
 const toggleModal =  useCallback(() => {
+
  ModalStore.toggleModal(props.id);
 }, [props.id])
 

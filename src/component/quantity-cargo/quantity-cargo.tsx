@@ -1,9 +1,9 @@
 import React, { useCallback } from 'react';
-import store from '../../store/index.js';
+import store from '../../store';
 
 const  scss = require ('./quantity-cargo.module.scss');
 
-const QuantityCargo = (props) => {
+const QuantityCargo = (props: { id: number}) => {
 
   const decrement = useCallback(() =>{
     store.decrementQuantity(props.id)
@@ -18,7 +18,7 @@ const QuantityCargo = (props) => {
       <span className = {scss.quantityTitle}>Количество</span>
       <div className = {scss.quantityButtonWrapper}>
          <button className = {scss.quantityButtonMinus} onClick = {decrement} >-</button> 
-         <input className = {scss.quantityInput} value = {store.dataCards[`${store.dataCards.findIndex(x => x.id === props.id)}`].quantity}></input>
+         <input className = {scss.quantityInput} value = {store.dataCards[store.dataCards.findIndex(x => x.id === props.id)].quantity}></input>
          <button className = {scss.quantityButtonPlus} onClick = {increment} >+</button> 
       </div>
   

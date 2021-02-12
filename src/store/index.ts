@@ -1,0 +1,59 @@
+import { observable, computed, makeAutoObservable, action } from "mobx";
+import ModalStore from "./modal.js";
+
+export interface IDataCard {
+  id: number;
+  name: string;
+  imgSrc: string;
+  price: number;
+  quantity: number
+}
+
+class Store {
+  _dataCards: Array<IDataCard> = [];
+
+  constructor() {
+    makeAutoObservable(this, {
+      dataCards: computed,
+      getTotalSum: computed,
+      incrmentQuantity: action,
+      decrementQuantity: action,
+      deleteCard: action,
+      _dataCards: observable,
+      setGoods: action
+    });
+  }
+
+  get getTotalSum() {
+    return this.dataCards.reduce(
+      (accumulator, currentValue) =>
+        accumulator + currentValue.price * currentValue.quantity,
+      0
+    );
+  }
+
+  incrmentQuantity = (index: number) => {
+    this._dataCards[index].quantity++;
+  };
+
+  decrementQuantity = (index: number) => {
+    if (this.dataCards[index].quantity > 1) {
+      this.dataCards[index].quantity--;
+    }
+  };
+
+  deleteCard = (id: number) => {
+    this._dataCards = this.dataCards.filter((item) => item.id !== id);
+  };
+
+  get dataCards() {
+    return this._dataCards;
+  }
+
+  setGoods = (data: Array<IDataCard>) => {
+    this._dataCards = data;
+
+  }
+}
+
+export default new Store();

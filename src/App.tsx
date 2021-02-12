@@ -1,14 +1,12 @@
 import React, { FC } from 'react';
 import Basket from './component/basket';
-import './App.css';
+const scss = require ( './App.module.scss');
 
-interface mainApp {
-  type?: FC
-}
 
-const  App: React.FunctionComponent<mainApp> = () => {
+const  App: React.FunctionComponent = () => {
+
   return (
-    <div className="basket">
+    <div className={scss.basket}>
      <Basket/>
     </div>
   )

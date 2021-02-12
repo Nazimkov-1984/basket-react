@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import CargoCard from '../cargo-card';
 import TotalPrice from '../total-price';
 import ButtonSubmit from '../button-submit';
@@ -7,14 +7,18 @@ import ButtonTrash from '../button-trash';
 import DescriptionCargo from '../description-cargo'; 
 import PriceCargo from '../price-cargo';
 
-import store from '../../store/index.js';
+import store from '../../store/index';
 import { observer } from 'mobx-react';
+import API from '../../services/request';
 
+import {IDataCard} from "../../store";
 const  scss = require ('./basket.module.scss');
 
 
 const Basket:React.FunctionComponent =  observer( () => {
-
+ useEffect (() => {
+  API.fetchGoods ()
+ }, [])
   return (
     <div className = {scss.basketHeader}>
       <h2 className = {scss.basketTitle}>Корзина</h2>
@@ -22,7 +26,7 @@ const Basket:React.FunctionComponent =  observer( () => {
         return(
           <CargoCard key = {item.id}>
               <DescriptionCargo name = {item.name} imgSrc = {item.imgSrc}/>
-              <QuantityCargo quantity = {item.quantity}  id = {item.id}/>
+              <QuantityCargo   id = {item.id}/>
               <PriceCargo price = {item.price * item.quantity}/>
               <ButtonTrash id = {item.id}/>
           </CargoCard>

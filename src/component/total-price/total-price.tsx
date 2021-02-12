@@ -1,5 +1,5 @@
 import React from 'react';
-import store  from '../../store/index.js';
+import store  from '../../store';
 import {observer} from 'mobx-react-lite';
 
 const  scss = require ('./total-price.module.scss');
